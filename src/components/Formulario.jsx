@@ -23,20 +23,14 @@ transition:  background-color .3s ease;
 
 
 export const Formulario = () => {
-    const monedas = [
-        {id: 'USD', nombre:'Dolar de Estados Unidos'},
-        {id: 'MXN', nombre:'Peso Mexicano'},
-        {id: 'EUR', nombre:'Euro'},
-        {id: 'GBP', nombre:'Libre Esterlina'}
-    ]
 
-    const [SelectMonedas] = useSelectMonedas('Elige tu Moneda', monedas)
-    //const [SelectCriptomonedas] = useSelectMonedas('Elige tu Criptomoneda')
+    const [SelectMonedas] = useSelectMonedas('Elige tu Moneda')
+    
+    SelectMonedas()
+    
     return (
         <form>
-            <SelectMonedas />
-            
-
+        <SelectMonedas />
             <InputSubmit
                 type="submit"
                 value="Cotizar"
